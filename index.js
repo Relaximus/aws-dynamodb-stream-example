@@ -1,6 +1,5 @@
 'use strict';
 var AWS = require("aws-sdk");
-// var sns = new AWS.SNS();
 
 exports.handler = (event, context, callback) => {
 

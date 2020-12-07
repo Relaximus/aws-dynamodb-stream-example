@@ -94,7 +94,6 @@ resource "aws_lambda_event_source_mapping" "stream_function_event_trigger" {
   starting_position = "LATEST"
 }
 
-
 //aws dynamodb put-item \
 //--table-name UsersTransactions \
 //--item userId={N=1},transactionId={N=1},accountId={N=1},ammount={N=32},shortDescription={S="Testing...1...2...3"}

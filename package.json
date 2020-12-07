@@ -1,0 +1,10 @@
+{
+  "name": "handler",
+  "version": "1.0.0",
+  "dependencies": {
+    "aws-sdk": "^2.804.0"
+  },
+  "scripts": {
+    "build": "zip lambda_function_payload.zip index.js"
+  }
+}
