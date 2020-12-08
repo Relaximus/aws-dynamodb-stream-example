@@ -21,7 +21,7 @@ resource "aws_dynamodb_table" "users-transactions-table" {
   }
 
   attribute {
-    name = "ammount"
+    name = "amount"
     type = "N"
   }
 
@@ -39,7 +39,7 @@ resource "aws_dynamodb_table" "users-transactions-table" {
   local_secondary_index {
     name = "amountLI"
     projection_type = "KEYS_ONLY"
-    range_key = "ammount"
+    range_key = "amount"
   }
 
   local_secondary_index {

@@ -1,0 +1,12 @@
+{
+  "name": "handler",
+  "version": "1.0.0",
+  "dependencies": {
+    "aws-sdk": "^2.804.0",
+    "elasticsearch": "^16.7.2",
+    "http-aws-es": "^6.0.0"
+  },
+  "scripts": {
+    "build": "zip -r ../lambda_function_payload.zip ."
+  }
+}

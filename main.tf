@@ -21,6 +21,14 @@ module "StreamProcessingLambda" {
 
   aws_region = var.aws_region
   stream_arn = module.TransactionsTable.streamArn
+  domain_arn = module.EsDomain.domain_arn
+  es_host = module.EsDomain.domain_host
+}
+
+module "EsDomain" {
+  source = "./modules/elastic"
+
+  lambda_role_arn = module.StreamProcessingLambda.lambda_role_arn
 }
 
 //aws dynamodb put-item \

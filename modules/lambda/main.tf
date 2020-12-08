@@ -34,6 +34,15 @@ resource "aws_iam_role_policy" "dyanmo_stream_lambda_policy" {
                 "dynamodb:ListStreams"
             ],
             "Resource": "${var.stream_arn}"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "es:ESHttpGet",
+                "es:ESHttpPost",
+                "es:ESHttpPut"
+            ],
+            "Resource": "${var.domain_arn}"
         }
     ]
   }
@@ -65,6 +74,12 @@ resource "aws_lambda_function" "process_dynamo_stream_function" {
   handler = "index.handler"
   role = aws_iam_role.dyanmo_stream_lambda_role.arn
   runtime = "nodejs12.x"
+  environment {
+    variables = {
+      ES_HOST = var.es_host
+      ES_REGION = var.aws_region
+    }
+  }
 
   filename      = "./lambda_function_payload.zip"
   source_code_hash = filebase64sha256("./lambda_function_payload.zip")
