@@ -13,7 +13,6 @@ const client = new elasticsearch.Client({
 });
 
 exports.handler = (event, context, callback) => {
-    console.log('creds: ', JSON.stringify(new AWS.EnvironmentCredentials('AWS')));
 
     event.Records.forEach((record) => {
         console.log('Stream record: ', JSON.stringify(record, null, 2));
