@@ -9,3 +9,7 @@ output "es_domain_arn" {
 output "es_domain_id" {
   value = module.EsDomain.domain_id
 }
+
+output "es_kibana_host" {
+  value = module.EsDomain.domain_kebana_host
+}

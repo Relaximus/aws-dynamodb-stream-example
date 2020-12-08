@@ -24,9 +24,7 @@ resource "aws_elasticsearch_domain_policy" "dynamo_indexing_es_policy" {
             "AWS": "*"
         },
         "Action": [
-            "es:ESHttpGet",
-            "es:ESHttpHead",
-            "es:ESHttpPost"
+            "es:*",
         ],
         "Resource": "${aws_elasticsearch_domain.dynamo_indexing_es.arn}/*"
     },

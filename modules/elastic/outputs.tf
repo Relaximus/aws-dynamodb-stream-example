@@ -9,3 +9,7 @@ output "domain_id" {
 output "domain_host" {
   value = aws_elasticsearch_domain.dynamo_indexing_es.endpoint
 }
+
+output "domain_kebana_host" {
+  value = aws_elasticsearch_domain.dynamo_indexing_es.kibana_endpoint
+}
