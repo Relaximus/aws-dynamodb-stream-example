@@ -2,7 +2,7 @@ This is a terraform project, which demonstrates how the next env could be built:
 
 DynamoDB table with stream -> Lambda listening to the stream -> Elasticsearch service
 or
-DynamoDB table with kinesis stream -> Kinesis Firehose -> Elasticserarch service
+DynamoDB table with Kinesis stream -> Kinesis Firehose -> Elasticserarch service
 
 ## Run rollout of the infrastructure
 * configure AWS console locally
