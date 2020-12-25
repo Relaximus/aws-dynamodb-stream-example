@@ -5,3 +5,6 @@
 /.terraform/
 /node_modules/aws-sdk/
 /node_modules/
+/lambda-function/node_modules/
+/.terraform.lock.hcl
+/.terraform.tfstate.lock.info

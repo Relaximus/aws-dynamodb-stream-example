@@ -1,4 +1,4 @@
-variable "lambda_role_arn" {
+variable "writer_role_arn" {
   type = string
-  description = "The role of lambda to grant specific access on site of ES"
+  description = "The role of lambda or Kinesis firehorse to grant specific access on site of ES"
 }
