@@ -1,11 +1,14 @@
-This is a terraform project to bild next env:
+This is a terraform project, which demonstrates how the next env could be built:
 
-DynomDB table with stream -> Lambda listening to the stream -> Elasticsearch service
+DynamoDB table with stream -> Lambda listening to the stream -> Elasticsearch service
+or
+DynamoDB table with kinesis stream -> Kinesis Firehose -> Elasticserarch service
 
 ## Run rollout of the infrastructure
 * configure AWS console locally
 * configure params in variables.tf if needed
 * run `terraform init` and then `terraform apply`
+* type true to make environment via Kinesis and type false to build lambda option
 * type yes
 
 ## Test the environment setup
