@@ -4,6 +4,10 @@ DynamoDB table with stream -> Lambda listening to the stream -> Elasticsearch se
 or
 DynamoDB table with Kinesis stream -> Kinesis Firehose -> Elasticserarch service
 
+Both ideas are described in two articles:
+* [Searching data from DynamoDB in three simple steps](https://www.relaximus.com/post/searching-data-from-dynamodb-in-three-simple-steps/)
+* [Searching data from DynamoDB using Amazon Kinesis streams](https://www.relaximus.com/post/searching-data-from-dynamodb-with-kinesis-streams/)
+
 ## Run rollout of the infrastructure
 * configure AWS console locally
 * configure params in variables.tf if needed
